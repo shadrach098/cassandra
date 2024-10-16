@@ -17,31 +17,34 @@ CQL (Cassandra Query Language): For creating tables and querying data.
 Installation
 To run the project, you will need to install the following dependencies:
 
-bash
+```bash
 Copy code
 pip install pandas cassandra-driver
+```
 Ensure that you have Apache Cassandra installed and running locally or remotely. You can download it from here.
 
 Running the Project
 Clone this repository to your local machine:
 
-bash
+```bash
 Copy code
 git clone https://github.com/shadrach098/cassandra.git
-
+```
 Download and install Docker from here.https://docs.docker.com/desktop/install/windows-install/
 
 Navigate to the project directory and start the Apache Cassandra service using Docker Compose:
 
-bash
+```bash
 Copy code
 cd your_repository
 docker-compose up -d  # Start the Cassandra service
+```
 To stop Cassandra, run:
 
-bash
+```bash
 Copy code
 docker-compose down  # Terminate the Cassandra service
+```
 Open the Jupyter Notebook and run the cells in sequence to execute the data import, processing, and queries.
 
 Follow the comments and explanations in the notebook to understand the problem-solving process and the results of each query.

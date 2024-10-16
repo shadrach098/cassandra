@@ -13,6 +13,8 @@ Technologies Used
 Python: For data processing and query execution.
 Apache Cassandra: As the database solution for efficient data management.
 Pandas: For CSV data manipulation.
+Docker: for running Cassandra on Windows Like A Linux OS 
+
 CQL (Cassandra Query Language): For creating tables and querying data.
 Installation
 To run the project, you will need to install the following dependencies:
@@ -27,8 +29,18 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/your_username/your_repository.git
+https://github.com/shadrach098/cassandra.git
 Navigate to the project directory:
+
+Download Docker:
+Navigate the project directory :
+bash
+cd your_repository
+Docker-compose up -d 
+to start the Cassandra Apache 
+Docker-compose down:
+to Terminate The Cassandra Apache
+
 
 bash
 Copy code

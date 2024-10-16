@@ -28,7 +28,8 @@ Clone this repository to your local machine:
 bash
 Copy code
 git clone https://github.com/shadrach098/cassandra.git
-Download and install Docker from here.
+
+Download and install Docker from here.[https://docs.docker.com/desktop/install/windows-install/]
 
 Navigate to the project directory and start the Apache Cassandra service using Docker Compose:
 

@@ -1,10 +1,9 @@
 # cassandra
 
-Music Streaming Data Analysis using Cassandra
-Overview
-This project involves creating a NoSQL database using Cassandra to assist with analyzing user activity and song data from a music streaming app, SoundCloud. The aim is to address the inefficiencies of using a CSV file by migrating the data to a more query-friendly NoSQL format.
 
-The data will be modeled and queried using Apache Cassandra to answer specific questions regarding user behavior and song preferences.
+# Music Streaming Data Analysis using Cassandra
+Overview
+This project involves creating a NoSQL database using Cassandra to analyze user activity and song data from the music streaming app SoundCloud. The goal is to address the inefficiencies of using a CSV file by migrating the data to a more query-friendly NoSQL format. The data will be modeled and queried using Apache Cassandra to answer specific questions regarding user behavior and song preferences.
 
 Project Objectives
 Data Modeling: Transition the data from a CSV file to a Cassandra NoSQL database.
@@ -13,8 +12,7 @@ Technologies Used
 Python: For data processing and query execution.
 Apache Cassandra: As the database solution for efficient data management.
 Pandas: For CSV data manipulation.
-Docker: for running Cassandra on Windows Like A Linux OS 
-
+Docker: For running Cassandra on Windows as if on a Linux OS.
 CQL (Cassandra Query Language): For creating tables and querying data.
 Installation
 To run the project, you will need to install the following dependencies:
@@ -29,22 +27,20 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-https://github.com/shadrach098/cassandra.git
-Navigate to the project directory:
+git clone https://github.com/shadrach098/cassandra.git
+Download and install Docker from here.
 
-Download Docker:
-Navigate the project directory :
-bash
-cd your_repository
-Docker-compose up -d 
-to start the Cassandra Apache 
-Docker-compose down:
-to Terminate The Cassandra Apache
-
+Navigate to the project directory and start the Apache Cassandra service using Docker Compose:
 
 bash
 Copy code
 cd your_repository
+docker-compose up -d  # Start the Cassandra service
+To stop Cassandra, run:
+
+bash
+Copy code
+docker-compose down  # Terminate the Cassandra service
 Open the Jupyter Notebook and run the cells in sequence to execute the data import, processing, and queries.
 
 Follow the comments and explanations in the notebook to understand the problem-solving process and the results of each query.
@@ -53,9 +49,10 @@ Dataset
 The dataset event_data.csv contains records of user activity from the SoundCloud app. This dataset will be used to populate the Cassandra database for querying.
 
 Queries Addressed
-create Three Different Database base on the following Queries:
-Query 1:Find the artist_name, song_title and length of song the SoundCloud app history that was heard during  session_number = 338, and item_in_session_number  = 4
-Query 2: Find the artist_name, song_title (sorted by item_in_session_number) and name(fname and lname) of the user for user_id = 10, session_number = 182    
-Query 3: Find every name(fname and lname) of the user from the SoundCloud app history that listened to the song_title 'All Hands Against His Own'
+Query 1: Find the artist_name, song_title, and length of the song heard in session number 338 and item in session number 4.
+Query 2: Find the artist_name, song_title (sorted by item in session number), and the user's full name (fname and lname) for user_id = 10 and session_number = 182.
+Query 3: Find every user (fname and lname) who listened to the song title 'All Hands Against His Own.'
 Conclusion
 By the end of this project, you'll have modeled the music streaming data in Cassandra, answered key queries regarding user activity, and optimized the system for easier data analysis.
+
+
